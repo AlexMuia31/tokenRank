@@ -1,11 +1,20 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
+import type { NextPageWithLayout } from "./_app";
+import React from "react";
+import Layout from "@/components/layout/layout";
+import { Box, Container, Grid, IconButton } from "@mui/material";
+import { Heading, SubHeading } from "@/components/Typographies";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import LanguageIcon from "@mui/icons-material/Language";
+import XIcon from "@mui/icons-material/X";
+import TelegramIcon from "@mui/icons-material/Telegram";
+import TokenInfo from "@/components/TokenInfo";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+const Home: NextPageWithLayout = () => {
   return (
     <>
       <Head>
@@ -14,101 +23,334 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} ${inter.className}`}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>src/pages/index.tsx</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{" "}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
-          </div>
-        </div>
+      <Box>
+        <Container maxWidth="xl" disableGutters={true}>
+          <Grid container spacing={2}>
+            <Grid item xs={12} md={4}>
+              <Box
+                sx={{
+                  background: "#19213D",
+                  p: "2%",
+                  borderRadius: "8px",
+                  height: "100%",
+                }}
+              >
+                <Box sx={{ display: "flex", alignItems: "center" }}>
+                  <IconButton sx={{ background: "#00EE8A" }}>
+                    <KeyboardArrowUpIcon sx={{ color: "#fff" }} />
+                  </IconButton>
+                  <Heading>Gainers</Heading>
+                </Box>
+                <Box
+                  sx={{
+                    border: "1px solid #F6F8FC",
+                    borderRadius: "16px",
+                    p: "2%",
+                    mt: "2%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <Box sx={{ display: "flex", gap: 1 }}>
+                    <SubHeading>1</SubHeading>
+                    <Box
+                      sx={{ background: "#fff", height: "15px", width: "15px" }}
+                    ></Box>
+                    <SubHeading>Bitcoin</SubHeading>
+                  </Box>
+                  <SubHeading>₹ 40,00,000</SubHeading>
+                  <SubHeading>+ 10%</SubHeading>
+                </Box>
+                <Box
+                  sx={{
+                    border: "1px solid #F6F8FC",
+                    borderRadius: "16px",
+                    p: "2%",
+                    mt: "2%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <Box sx={{ display: "flex", gap: 1 }}>
+                    <SubHeading>1</SubHeading>
+                    <Box
+                      sx={{ background: "#fff", height: "15px", width: "15px" }}
+                    ></Box>
+                    <SubHeading>Bitcoin</SubHeading>
+                  </Box>
+                  <SubHeading>₹ 40,00,000</SubHeading>
+                  <SubHeading>+ 10%</SubHeading>
+                </Box>
+                <Box
+                  sx={{
+                    border: "1px solid #F6F8FC",
+                    borderRadius: "16px",
+                    p: "2%",
+                    mt: "2%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <Box sx={{ display: "flex", gap: 1 }}>
+                    <SubHeading>1</SubHeading>
+                    <Box
+                      sx={{ background: "#fff", height: "15px", width: "15px" }}
+                    ></Box>
+                    <SubHeading>Bitcoin</SubHeading>
+                  </Box>
+                  <SubHeading>₹ 40,00,000</SubHeading>
+                  <SubHeading>+ 10%</SubHeading>
+                </Box>
+              </Box>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Box
+                sx={{
+                  background: "#19213D",
+                  p: "2%",
+                  borderRadius: "8px",
+                  height: "100%",
+                }}
+              >
+                <Box sx={{ display: "flex", alignItems: "center" }}>
+                  <IconButton sx={{ background: "#00EE8A" }}>
+                    <KeyboardArrowUpIcon sx={{ color: "#fff" }} />
+                  </IconButton>
+                  <Heading>Trending</Heading>
+                </Box>
+                <Box
+                  sx={{
+                    border: "1px solid #F6F8FC",
+                    borderRadius: "16px",
+                    p: "2%",
+                    mt: "2%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <Box sx={{ display: "flex", gap: 1 }}>
+                    <SubHeading>1</SubHeading>
+                    <Box
+                      sx={{ background: "#fff", height: "15px", width: "15px" }}
+                    ></Box>
+                    <SubHeading>Bitcoin</SubHeading>
+                  </Box>
 
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
-        </div>
+                  <Box sx={{ width: "50%" }}>
+                    <SubHeading sx={{ textAlign: "center" }}>+ 10%</SubHeading>
+                  </Box>
+                </Box>
+                <Box
+                  sx={{
+                    border: "1px solid #F6F8FC",
+                    borderRadius: "16px",
+                    p: "2%",
+                    mt: "2%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <Box sx={{ display: "flex", gap: 1 }}>
+                    <SubHeading>1</SubHeading>
+                    <Box
+                      sx={{ background: "#fff", height: "15px", width: "15px" }}
+                    ></Box>
+                    <SubHeading>Bitcoin</SubHeading>
+                  </Box>
 
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
+                  <Box sx={{ width: "50%" }}>
+                    <SubHeading sx={{ textAlign: "center" }}>+ 10%</SubHeading>
+                  </Box>
+                </Box>
+                <Box
+                  sx={{
+                    border: "1px solid #F6F8FC",
+                    borderRadius: "16px",
+                    p: "2%",
+                    mt: "2%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <Box sx={{ display: "flex", gap: 1 }}>
+                    <SubHeading>1</SubHeading>
+                    <Box
+                      sx={{ background: "#fff", height: "15px", width: "15px" }}
+                    ></Box>
+                    <SubHeading>Bitcoin</SubHeading>
+                  </Box>
+                  <Box sx={{ width: "50%" }}>
+                    <SubHeading sx={{ textAlign: "center" }}>+ 10%</SubHeading>
+                  </Box>
+                </Box>
+              </Box>
+            </Grid>
+            <Grid item xs={12} md={4}>
+              <Box sx={{ background: "#19213D", p: "2%", borderRadius: "8px" }}>
+                <Box sx={{ display: "flex", alignItems: "center" }}>
+                  <IconButton sx={{ background: "#00EE8A" }}>
+                    <KeyboardArrowUpIcon sx={{ color: "#fff" }} />
+                  </IconButton>
+                  <Heading>Gainers</Heading>
+                </Box>
+                <Box
+                  sx={{
+                    border: "1px solid #F6F8FC",
+                    borderRadius: "16px",
+                    p: "2%",
+                    mt: "2%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                  }}
+                >
+                  <Box sx={{ display: "flex", gap: 1 }}>
+                    <SubHeading>1</SubHeading>
+                    <Box
+                      sx={{ background: "#fff", height: "15px", width: "15px" }}
+                    ></Box>
+                    <Box
+                      sx={{ background: "#fff", height: "15px", width: "15px" }}
+                    ></Box>
+                    <SubHeading>Bitcoin</SubHeading>
+                  </Box>
+                  <Box
+                    sx={{
+                      width: "50%",
+                      display: "flex",
+                      justifyContent: "space-around",
+                    }}
+                  >
+                    <TelegramIcon />
+                    <XIcon />
+                    <LanguageIcon />
+                  </Box>
+                </Box>
+                <Box
+                  sx={{
+                    border: "1px solid #F6F8FC",
+                    borderRadius: "16px",
+                    p: "2%",
+                    mt: "2%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                  }}
+                >
+                  <Box sx={{ display: "flex", gap: 1 }}>
+                    <SubHeading>1</SubHeading>
+                    <Box
+                      sx={{ background: "#fff", height: "15px", width: "15px" }}
+                    ></Box>
+                    <Box
+                      sx={{ background: "#fff", height: "15px", width: "15px" }}
+                    ></Box>
+                    <SubHeading>Bitcoin</SubHeading>
+                  </Box>
+                  <Box
+                    sx={{
+                      width: "50%",
+                      display: "flex",
+                      justifyContent: "space-around",
+                    }}
+                  >
+                    <TelegramIcon />
+                    <XIcon />
+                    <LanguageIcon />
+                  </Box>
+                </Box>
+                <Box
+                  sx={{
+                    border: "1px solid #F6F8FC",
+                    borderRadius: "16px",
+                    p: "2%",
+                    mt: "2%",
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                  }}
+                >
+                  <Box sx={{ display: "flex", gap: 1 }}>
+                    <SubHeading>1</SubHeading>
+                    <Box
+                      sx={{ background: "#fff", height: "15px", width: "15px" }}
+                    ></Box>
+                    <Box
+                      sx={{ background: "#fff", height: "15px", width: "15px" }}
+                    ></Box>
+                    <SubHeading>Bitcoin</SubHeading>
+                  </Box>
+                  <Box
+                    sx={{
+                      width: "50%",
+                      display: "flex",
+                      justifyContent: "space-around",
+                    }}
+                  >
+                    <TelegramIcon />
+                    <XIcon />
+                    <LanguageIcon />
+                  </Box>
+                </Box>
+              </Box>
+            </Grid>
+          </Grid>
+          <SubHeading
+            sx={{
+              color: "#00EF8B",
+              mt: "2%",
+              mb: "2%",
+              fontSize: { xs: "18px", md: "31px" },
+            }}
           >
-            <h2>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
+            Upcoming Launches
+          </SubHeading>
+          <Grid container spacing={2}>
+            <Grid item xs={12} md={3}>
+              <TokenInfo />
+            </Grid>
+            <Grid item xs={12} md={3}>
+              <TokenInfo />
+            </Grid>{" "}
+            <Grid item xs={12} md={3}>
+              <TokenInfo />
+            </Grid>{" "}
+            <Grid item xs={12} md={3}>
+              <TokenInfo />
+            </Grid>{" "}
+            <Grid item xs={12} md={3}>
+              <TokenInfo />
+            </Grid>{" "}
+            <Grid item xs={12} md={3}>
+              <TokenInfo />
+            </Grid>{" "}
+            <Grid item xs={12} md={3}>
+              <TokenInfo />
+            </Grid>{" "}
+            <Grid item xs={12} md={3}>
+              <TokenInfo />
+            </Grid>{" "}
+            <Grid item xs={12} md={3}>
+              <TokenInfo />
+            </Grid>{" "}
+            <Grid item xs={12} md={3}>
+              <TokenInfo />
+            </Grid>{" "}
+            <Grid item xs={12} md={3}>
+              <TokenInfo />
+            </Grid>{" "}
+            <Grid item xs={12} md={3}>
+              <TokenInfo />
+            </Grid>
+          </Grid>
+        </Container>
+      </Box>
     </>
   );
-}
+};
+
+Home.getLayout = function getLayout(page: React.ReactElement) {
+  return <Layout>{page}</Layout>;
+};
+
+export default Home;
